@@ -3,10 +3,10 @@ const { Intents } = require("discord.js");
 /* config */
 const config = {
   // Bot Admins, level 9 by default. Array of user ID strings.
-  "admins": [],
+  "admins": [864810627981246505],
 
   // Bot Support, level 8 by default. Array of user ID strings
-  "support": [],
+  "support": [1108791164808724582],
 
   /*
   * Intents the bot needs.
@@ -24,14 +24,14 @@ const config = {
   * DO NOT REMOVE THIS BEFORE YOUR BOT IS LOADED AND FUNCTIONAL.
   */
   "defaultSettings" : {
-    "prefix": "~",
+    "prefix": "!",
     "modLogChannel": "mod-log",
-    "modRole": "Moderator",
-    "adminRole": "Administrator",
+    "modRole": "Yardimci-Kurucu",
+    "adminRole": "Kurucu",
     "systemNotice": "true", // This gives a notice when a user tries to run a command that they do not have permission to use.
     "commandReply": "true", // Toggle this if you want the bot to ping the command executor or not.
     "welcomeChannel": "welcome",
-    "welcomeMessage": "Say hello to {{user}}, everyone! We all need a warm welcome sometimes :D",
+    "welcomeMessage": "Hoş Geldin {{user}}, Burada Çok Eğleneceksin :D",
     "welcomeEnabled": "false"
   },
 
@@ -51,7 +51,7 @@ const config = {
     // This is your permission level, the staff levels should always be above the rest of the roles.
     { level: 2,
       // This is the name of the role.
-      name: "Moderator",
+      name: "Mod Role",
       /*
       * The following lines check the guild the message came from for the roles.
       * Then it checks if the member that authored the message has the role.
@@ -69,7 +69,7 @@ const config = {
     },
 
     { level: 3,
-      name: "Administrator", 
+      name: "Admin Role", 
       check: (message) => {
         try {
           const adminRole = message.guild.roles.cache.find(r => r.name.toLowerCase() === message.settings.adminRole.toLowerCase());
