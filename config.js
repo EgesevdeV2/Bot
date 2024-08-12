@@ -33,6 +33,7 @@ const config = {
     "welcomeChannel": "welcome",
     "welcomeMessage": "Hoş Geldin {{user}}, Burada Çok Eğleneceksin :D",
     "welcomeEnabled": "false"
+    "rolesWelcome": ["Kayıtsız",""]
   },
 
   // PERMISSION LEVEL DEFINITIONS.
